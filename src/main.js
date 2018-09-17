@@ -6,6 +6,8 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import banner from './components/banner'
+ 
+import 'animate.css'
 
 
 Vue.component('myBanner',banner)

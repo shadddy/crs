@@ -8,7 +8,7 @@
 					<h1 class="title">应对CRS风暴的避税天堂</h1>
 					<h2 class="subtitle">TAX HAVEN TO DEAL WITH CRS STORM</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic1" alt="pic1" class="pic2 pic-1 " />
+					<img :src="pic1" alt="pic1" class="pic2 pic-1 wow slideInUp"/>
 					<div class="button">免费查看对应方案</div>
 				</div>
 			</div>
@@ -38,6 +38,7 @@
 <script>
 	import header from '@/components/header'
 	import footer from '@/components/footer'
+	import {WOW} from 'wowjs' 
 	export default {
 		components: {
 			myHeader: header,
@@ -51,6 +52,9 @@
 				pic3: require('../assets/img/know-pic3.jpg')
 
 			}
+		},
+		mounted(){
+			new WOW().init()
 		}
 
 	}
