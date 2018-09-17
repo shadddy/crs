@@ -96,6 +96,12 @@ li{
 	color: @orange;
 	background: transparent;
 }
+.pic{
+	margin: 0 auto;
+	margin-top: 140*@rem;
+	width: 95%;
+	display: block;
+}
 @media screen and(max-width: 1420px){
   .container{
     width: 100%

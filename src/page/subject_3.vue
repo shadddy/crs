@@ -1,10 +1,17 @@
 <template>
 	<div class="content-wrap">
-		专题3
+		<my-banner :banner="banner"></my-banner>
 	</div>
 </template>
 
 <script>
+	export default{
+		data(){
+			return{
+				banner: require('../assets/img/subject-3-banner.jpg'),
+			}
+		}
+	}
 </script>
 
 <style>

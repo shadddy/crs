@@ -4,7 +4,7 @@
 		<div class="content-wrap">
 			<my-banner :banner="banner"></my-banner>
 			<div class="container">
-				<img :src="pic1" alt="pic-1" class="pic-1"/>
+				<img :src="pic1" alt="pic-1" class="pic pic-1"/>
 			</div>
 			<div class="box">
 				<div class="container">
@@ -63,11 +63,6 @@
 </script>
 
 <style scoped lang="less">
-	.pic-1{
-		width: 100%;
-		margin-top: 140*@rem;
-		display: block;	
-}
 .contact-box{
 	text-align: center;
 	margin-top: 60*@rem;
