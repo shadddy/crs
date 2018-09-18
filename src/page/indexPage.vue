@@ -15,33 +15,39 @@
 					</div>
 
 					<img :src="pic1" class="pic-1 pic2 wow fadeInUp" alt="pic-1" />
-					<div class="button wow zoomIn">立即抢占名额</div>
+					<div class="button wow zoomIn" @click="toQ">
+						<a>立即抢占名额</a></div>
 				</div>
 			</div>
 			<!--投资移民优势-->
 			<div class="box advantage">
 				<div class="container">
-					<h1 class="title">投资移民优势</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">投资移民优势</h1>
 					<h2 class="subtitle">INVESTMENT IMMIGRATION ADVANTAGE</h2>
 					<div class="bottom-line"></div>
-					<ul>
+					</div>
+					
+					<ul class="wow fadeInUp">
 						<li v-for="item in advantageList">
 							<h3>{{item.title}}</h3>
 							<p>{{item.txt}}</p>
 							<p>{{item.txt2}}</p>
 						</li>
 					</ul>
-					<div class="button">免费咨询申请流程</div>
+					<div class="button wow zoomIn" @click="toQ">免费咨询申请流程</div>
 				</div>
 			</div>
 			<!--申请永久居留条件-->
 			<div class="box condition">
 				<div class="container">
-					<h1 class="title">申请永久居留条件</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">申请永久居留条件</h1>
 					<h2 class="subtitle">APPLICATION FOR PERMANENT RESIDENCE CONDITIONS</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic2" class="pic-2 pic2" alt="pic-2" />
-					<div class="button">
+					</div>
+					<img :src="pic2" class="pic-2 pic2 wow fadeInUp" alt="pic-2" />
+					<div class="button wow zoomIn" @click="toQ">
 						立即抢占名额
 					</div>
 				</div>
@@ -49,11 +55,13 @@
 			<!--申请永久居留流程-->
 			<div class="box process">
 				<div class="container">
-					<h1 class="title">申请永久居留流程</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">申请永久居留流程</h1>
 					<h2 class="subtitle">APPLICATION FOR PERMANENT RESIDENCE PROCESS</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic3" class="pic-3 pic2" alt="pic-3" />
-					<div class="button">
+					</div>
+					<img :src="pic3" class="pic-3 pic2 wow fadeInUp" alt="pic-3" />
+					<div class="button wow zoomIn" @click="toQ">
 						免费咨询申请流程
 					</div>
 				</div>
@@ -61,11 +69,13 @@
 			<!--最低仅需2.5万-->
 			<div class="box minimum">
 				<div class="container">
-					<h1 class="title">最低仅需2.5万美元</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">最低仅需2.5万美元</h1>
 					<h2 class="subtitle">THE MINIMUM COST IS ONLY 25 THOUSAND DOLLARS.</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic4" class="pic-4 pic2" alt="pic-4" />
-					<div class="button">
+					</div>
+					<img :src="pic4" class="pic-4 pic2 wow fadeInUp" alt="pic-4" />
+					<div class="button wow zoomIn" @click="toQ">
 						立即抢占名额
 					</div>
 				</div>
@@ -73,11 +83,13 @@
 			<!--为上百位客户成功移民-->
 			<div class="box successful">
 				<div class="container">
-					<h1 class="title">为上百位客户成功移民</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">为上百位客户成功移民</h1>
 					<h2 class="subtitle">SUCCESSFUL IMMIGRATION FOR HUNDREDS OF CLIENTS</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic5" class="pic-5 pic2" alt="pic-5" />
-					<div class="button">
+					</div>
+					<img :src="pic5" class="pic-5 pic2 wow fadeInUp" alt="pic-5" />
+					<div class="button wow zoomIn" >
 						免费咨询申请流程
 					</div>
 				</div>
@@ -165,6 +177,11 @@
 					txt2: '提供免费或优惠的医疗服务'
 				}]
 			}
+		},
+		methods:{
+			toQ(){
+				window.open("http://wpa.qq.com/msgrd?v=3&uin=93926753&site=qq&menu=yes")
+			}
 		}
 	}
 </script>
@@ -249,11 +266,30 @@
 	
 	@media only screen and (max-width: 1200px) {
 		.container-wrap {
-			.order {
+			.advantage {
 				ul {
 					li {
-						display: block;
+						
+						width: calc(100%/3);
+					}
+				}
+			}
+			.box2{
+				ul {
+					li {
 						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 800px) {
+		.container-wrap {
+			.advantage {
+				ul {
+					li {
+						
+						width: calc(100%/2);
 					}
 				}
 			}

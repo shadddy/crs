@@ -5,29 +5,35 @@
 			<my-banner :banner="banner"></my-banner>
 			<div class="box">
 				<div class="container">
-					<h1 class="title">应对CRS风暴的避税天堂</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">应对CRS风暴的避税天堂</h1>
 					<h2 class="subtitle">TAX HAVEN TO DEAL WITH CRS STORM</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic1" alt="pic1" class="pic2 pic-1 wow slideInUp"/>
-					<div class="button">免费查看对应方案</div>
+					</div>
+					<img :src="pic1" alt="pic1" class="pic2 pic-1 wow zoomIn"/>
+					<div class="button wow fadeIn">免费查看对应方案</div>
 				</div>
 			</div>
 			<div class="box">
 				<div class="container">
-					<h1 class="title">创业投资的新蓝海</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">创业投资的新蓝海</h1>
 					<h2 class="subtitle">NEW BLUE OCEAN OF VENTURE CAPITAL</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic2" alt="pic2" class="pic2 pic-2 " />
-					<div class="button">免费查看对应方案</div>
+					</div>
+					<img :src="pic2" alt="pic2" class="pic2 pic-2 wow fadeInUp" />
+					<div class="button wow fadeIn">免费查看对应方案</div>
 				</div>
 			</div>
 			<div class="box">
 				<div class="container">
-					<h1 class="title">宜居的全球后花园</h1>
+					<div class="wow fadeInUp">
+						<h1 class="title">宜居的全球后花园</h1>
 					<h2 class="subtitle">LIVEBLE GLOBAL BACKYARD</h2>
 					<div class="bottom-line"></div>
-					<img :src="pic3" alt="pic3" class="pic2 pic-3 " />
-					<div class="button">免费查看对应方案</div>
+					</div>
+					<img :src="pic3" alt="pic3" class="pic2 pic-3 wow fadeInUp" />
+					<div class="button wow fadeIn">免费查看对应方案</div>
 				</div>
 			</div>
 		</div>

@@ -12,9 +12,28 @@
 					</ul>
 				</li>
 			</ul>
+			<!--移动端导航-->
+			<nav class="navbar">
+				<h4>
+					<span @click="menu">
+							<i></i>
+							<i></i>
+							<i></i>
+					</span>
+					</h4>
+				<ul>
+					<li v-for="item in navList" :class="item.act?'act':null">
+						<h3 :class="item.length?'act':null" @click="Router(item.url)">{{item.name}}</h3>
+						<div>
+							<p v-for="items in item.subNav" @click="Router(items.url)">{{items.name}}</p>
+						</div>
+					</li>
+				</ul>
+			</nav>
 			<div class="right">
 				<span>私人定制</span>
-				<img :src="icon" alt="icon" class="icon" />
+				<img :src="icon" alt="icon" class="icon" @mouseenter="ewmShow=true" @mouseleave="ewmShow=false">
+				<img :src="erweima" alt="wechat" class="erweima" v-show="ewmShow"/>
 			</div>
 		</div>
 	</div>
@@ -25,13 +44,15 @@
 			return {
 				logo: require('../assets/img/logo.png'),
 				icon: require('../assets/img/header-icon.png'),
+				erweima:require('../assets/img/erweima.jpg'),
+				ewmShow:false,
 				navList: [{
 					name: '迪拜移民',
 					url: '/'
 				}, {
 					name: 'CRS 专题',
 					url: 'subject',
-					lengt: true,
+					length: true,
 					subNav: [{
 						name: 'CRS 风险详解',
 						url:'subject/subject_2'
@@ -52,7 +73,6 @@
 		methods: {
 			//页面跳转
 			Router: function(str) {
-				
 				if(str == "" || str == undefined) {
 					return false;
 				}
@@ -65,9 +85,9 @@
 				}
 				this.$router.push('/' + strs);
 			},
-			func:function(val){
-				alert(val)
-			}
+			menu: function() {
+				$(".navbar>ul").slideToggle();
+			},
 			
 		},
 		mounted(){
@@ -78,11 +98,23 @@
 					$(this).children('.subNav').hide()
 				})
 			},200)
+			
+			let that = this;
+			$(".navbar>ul li h3").click(function() {
+				if($(this).next().is(":hidden")) {
+					$(".navbar>ul li div").slideUp("slow");
+					$(this).next().slideDown("slow");
+				} else {
+					$(this).next().slideUp("slow");
+				}
+			})
+			
 		}
 	}
 </script>
 
 <style lang="less" scoped>
+@w: 19.2;
 	.header-wrap {
 		width: 100%;
 		.container {
@@ -165,6 +197,124 @@
 					vertical-align: middle;
 					display: inline-block;
 				}
+				.erweima{
+					width: 300*@rem;
+					height: 300*@rem;
+					top: 87*@rem;
+					right: 0;
+					position: absolute;
+				}
+			}
+			.navbar {
+				color: #fff;
+				border: 1px solid #f1f1f1;
+				margin: 10px 0 0 0;
+				background: #fafafa;
+				margin-bottom: 20px;
+				width: 100%;
+				box-sizing: border-box;
+				h4 {
+					height: 46px;
+					span {
+						width: 44px;
+						height: 34px;
+						display: block;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+						cursor: pointer;
+						box-sizing: border-box;
+						padding: 4px 0 0 0;
+						float: right;
+						margin: 6px 15px 0 0;
+						i {
+							width: 22px;
+							height: 2px;
+							background: #999;
+							display: block;
+							margin: 4px auto 0 auto;
+						}
+					}
+					span:hover {
+						border: 1px solid #03A9F4;
+					}
+				}
+				ul {
+					display: none;
+					li {
+						color: #666;
+						font-weight: 700;
+						font-size: 14px;
+						line-height: 46px;
+						border-top: 1px solid #f1f1f1;
+						cursor: pointer;
+						padding-left: 20px;
+						h3 {
+							position: relative;
+						}
+						h3.act:after {
+							content: '';
+							display: block;
+							position: absolute;
+							width: 10px;
+							height: 10px;
+							border-bottom: 1px solid #ccc;
+							border-right: 1px solid #ccc;
+							transform: translateY(-50%) rotate(45deg);
+							right: 20px;
+							top: 50%;
+						}
+						p {
+							font-weight: 500;
+							padding-left: 20px;
+						}
+						div {
+							display: none;
+						}
+					}
+					li:hover {
+						background: #fff;
+					}
+				}
+			}
+		}
+	}
+	
+	
+	@media only screen and  (max-width: 768px) {
+		.header-wrap{
+			.container{
+				.logo{
+					position: absolute;
+				}
+				.nav{
+					display: none;
+				}
+				.right{
+					display: none;
+				}
+				
+			}
+		}
+	}
+	@media only screen and  (max-width: 1420px) {
+		.header-wrap{
+			.container{
+
+				.nav{
+					margin-left: 10*@rem;
+				}
+
+				
+			}
+		}
+	}
+	@media only screen and  (min-width: 768px) {
+		.header-wrap{
+			.container{
+				.navbar{
+					display: none;
+				}
+				
 			}
 		}
 	}

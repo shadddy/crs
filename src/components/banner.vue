@@ -74,14 +74,15 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 1200px) {
+	@media only screen and (max-width: 1000px) {
 		.banner-wrap {
 			.order {
 				.container{
 					ul {
 					li {
-						display: block;
-						width: 100%;
+						display: inline-block;
+						width: 50%;
+						text-align: center;
 					}
 				}
 				}
