@@ -38,7 +38,7 @@
 	export default {
 		data(){
 			return{
-				banner: require('../assets/img/subject-1-banner.jpg'),
+				banner: require('../assets/img/subject-2-banner.jpg'),
 				pic1: require('../assets/img/subject-2-pic1.jpg'),
 				pic2: require('../assets/img/subject-2-pic2.jpg'),
 				pic3: require('../assets/img/subject-2-pic3.jpg'),

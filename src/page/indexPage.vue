@@ -3,15 +3,19 @@
 		<my-header></my-header>
 		<div class="content-wrap">
 			<my-banner :banner="banner">
-				
+
 			</my-banner>
 			<!--三大刚性需求-->
 			<div class="box">
 				<div class="container">
-					<h1 class="title">三大刚性需求 一次完美解决</h1>
-					<h2 class="subtitle">THREE RIGID DEMANDS,A PERFECT SOLUTION.</h2>
-					<div class="bottom-line"></div>
-					<div class="button">立即抢占名额</div>
+					<div class="wow fadeInUp">
+						<h1 class="title">三大刚性需求 一次完美解决</h1>
+						<h2 class="subtitle">THREE RIGID DEMANDS,A PERFECT SOLUTION.</h2>
+						<div class="bottom-line"></div>
+					</div>
+
+					<img :src="pic1" class="pic-1 pic2 wow fadeInUp" alt="pic-1" />
+					<div class="button wow zoomIn">立即抢占名额</div>
 				</div>
 			</div>
 			<!--投资移民优势-->
@@ -36,6 +40,7 @@
 					<h1 class="title">申请永久居留条件</h1>
 					<h2 class="subtitle">APPLICATION FOR PERMANENT RESIDENCE CONDITIONS</h2>
 					<div class="bottom-line"></div>
+					<img :src="pic2" class="pic-2 pic2" alt="pic-2" />
 					<div class="button">
 						立即抢占名额
 					</div>
@@ -47,6 +52,7 @@
 					<h1 class="title">申请永久居留流程</h1>
 					<h2 class="subtitle">APPLICATION FOR PERMANENT RESIDENCE PROCESS</h2>
 					<div class="bottom-line"></div>
+					<img :src="pic3" class="pic-3 pic2" alt="pic-3" />
 					<div class="button">
 						免费咨询申请流程
 					</div>
@@ -58,6 +64,7 @@
 					<h1 class="title">最低仅需2.5万美元</h1>
 					<h2 class="subtitle">THE MINIMUM COST IS ONLY 25 THOUSAND DOLLARS.</h2>
 					<div class="bottom-line"></div>
+					<img :src="pic4" class="pic-4 pic2" alt="pic-4" />
 					<div class="button">
 						立即抢占名额
 					</div>
@@ -69,6 +76,7 @@
 					<h1 class="title">为上百位客户成功移民</h1>
 					<h2 class="subtitle">SUCCESSFUL IMMIGRATION FOR HUNDREDS OF CLIENTS</h2>
 					<div class="bottom-line"></div>
+					<img :src="pic5" class="pic-5 pic2" alt="pic-5" />
 					<div class="button">
 						免费咨询申请流程
 					</div>
@@ -105,17 +113,24 @@
 <script>
 	import header from '@/components/header'
 	import footer from '@/components/footer'
-//	import banner from '@/components/banner'
+	import { WOW } from 'wowjs'
 	export default {
 		components: {
 			myHeader: header,
 			myFooter: footer,
-//			myBanner:banner
+			//			myBanner:banner
+		},
+		mounted() {
+			new WOW().init()
 		},
 		data() {
 			return {
 				banner: require('../assets/img/index-banner.jpg'),
-				
+				pic1: require('../assets/img/index-pic1.jpg'),
+				pic2: require('../assets/img/index-pic2.jpg'),
+				pic3: require('../assets/img/index-pic3.jpg'),
+				pic4: require('../assets/img/index-pic4.jpg'),
+				pic5: require('../assets/img/index-pic5.jpg'),
 				advantageList: [{
 					title: '投资少',
 					txt: '最低2.5万美元',
@@ -155,9 +170,7 @@
 </script>
 
 <style lang="less" scoped>
-	.container-wrap {
-		
-	}
+	.container-wrap {}
 	
 	.advantage {
 		ul {
@@ -189,28 +202,28 @@
 		width: 100%;
 		padding: 100*@rem 0;
 		background: #ebeff2;
-		h1{
+		h1 {
 			color: #a1a1a1;
 			text-align: center;
 		}
-		h2{
+		h2 {
 			color: #999998;
 			text-align: center;
 			font-weight: 500;
 			font-size: 30*@rem;
 			line-height: 80*@rem;
 		}
-		ul{
+		ul {
 			display: flex;
 			display: -ms-flexbox;
 			display: -webkit-flex;
 			flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
-			li{
+			li {
 				width: 473*@rem;
 				text-align: center;
-				span{
+				span {
 					display: block;
 					width: 275*@rem;
 					margin: 30*@rem auto;
@@ -220,14 +233,18 @@
 					background: @blue;
 					color: #fff;
 				}
-				p{
+				p {
 					color: #999998;
 					line-height: 50*@rem;
 				}
-				
 			}
 		}
-		
+	}
+	
+	.pic2 {
+		margin: 100*@rem auto;
+		width: 100%;
+		display: block;
 	}
 	
 	@media only screen and (max-width: 1200px) {
