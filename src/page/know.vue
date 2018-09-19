@@ -11,7 +11,7 @@
 						<div class="bottom-line"></div>
 					</div>
 					<img :src="pic1" alt="pic1" class="pic2 pic-1 wow zoomIn" />
-					<div class="button wow fadeIn">免费查看对应方案</div>
+					<div class="button wow fadeIn" @click="Router('subject/subject_3')">免费查看对应方案</div>
 				</div>
 			</div>
 			<div class="box">
@@ -27,7 +27,7 @@
 							<p>{{item.txt}}</p>
 						</li>
 					</ul>
-					<div class="button wow fadeIn">免费查看对应方案</div>
+					<div class="button wow fadeIn" @click="Router('subject/subject_3')">免费查看对应方案</div>
 				</div>
 			</div>
 			<div class="box">
@@ -38,7 +38,7 @@
 						<div class="bottom-line"></div>
 					</div>
 					<img :src="pic3" alt="pic3" class="pic2 pic-3 wow fadeInUp" />
-					<div class="button wow fadeIn">免费查看对应方案</div>
+					<div class="button wow fadeIn" @click="Router('subject/subject_3')">免费查看对应方案</div>
 				</div>
 			</div>
 		</div>
@@ -91,12 +91,28 @@
 		},
 		mounted() {
 			new WOW().init()
-			$('.icon-box li').hover(function(){
+			$('.icon-box li').hover(function() {
 				$(this).children('img').fadeOut()
 				$(this).siblings().children('img').show()
-			},function(){
+			}, function() {
 				$(this).children('img').show()
 			})
+		},
+		methods: {
+			Router: function(str) {
+
+				if(str == "" || str == undefined) {
+					return false;
+				}
+				if(str == "/") {
+					str = "";
+				}
+				let strs = str;
+				if(strs == "index") {
+					strs = '';
+				}
+				this.$router.push('/' + strs);
+			}
 		}
 
 	}
