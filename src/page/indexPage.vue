@@ -43,7 +43,7 @@
 				<div class="container">
 					<div class="wow fadeInUp">
 						<h1 class="title">申请永久居留条件</h1>
-					<h2 class="subtitle">APPLICATION FOR PERMANENT RESIDENCE CONDITIONS</h2>
+					<h2 class="subtitle">APPLICATION CONDITIONS FOR PERMANENT RESIDENCE</h2>
 					<div class="bottom-line"></div>
 					</div>
 					<img :src="pic2" class="pic-2 pic2 wow fadeInUp" alt="pic-2" />
@@ -57,7 +57,7 @@
 				<div class="container">
 					<div class="wow fadeInUp">
 						<h1 class="title">申请永久居留流程</h1>
-					<h2 class="subtitle">APPLICATION FOR PERMANENT RESIDENCE PROCESS</h2>
+					<h2 class="subtitle">APPLICATION PROCESS FOR PERMANENT RESIDENCE</h2>
 					<div class="bottom-line"></div>
 					</div>
 					<img :src="pic3" class="pic-3 pic2 wow fadeInUp" alt="pic-3" />

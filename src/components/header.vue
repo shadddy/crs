@@ -122,8 +122,9 @@
 			overflow: initial;
 			.logo {
 				width: 244*@rem;
-				height: 115*@rem;
+				height: 66*@rem;
 				cursor: pointer;
+				margin-top: 24.5*@rem;
 			}
 			.nav {
 				margin-left: 200*@rem;

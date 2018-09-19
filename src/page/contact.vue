@@ -58,13 +58,14 @@
 			new WOW().init()
 			
 			var map=new BMap.Map('map')
-			var point=new BMap.Point(55.35884,25.293274)
-			map.centerAndZoom(point, 11)
+			var point=new BMap.Point(55.263584,25.184276)
+			map.centerAndZoom(point, 15)
 			
-			var pt = new BMap.Point(55.35884,25.293274)
+			var pt = new BMap.Point(55.263584,25.184276)
 			var myIcon = new BMap.Icon("../assets/img/point.png", new BMap.Size(300,157));
-			var marker2 = new BMap.Marker(pt,{icon:myIcon})
-				map.addOverlay(marker2);
+			var marker2 = new BMap.Marker(pt)
+			map.addOverlay(marker2);
+			map.enableScrollWheelZoom(true);
 		}
 	}
 </script>

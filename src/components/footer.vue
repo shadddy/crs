@@ -20,7 +20,7 @@
 				<table>
 					<tr><td>免费咨询:</td><td>9:30AM-20:30PM</td>
 					<tr><td>移民受理:</td><td>9:30AM-20:30PM</td></tr>
-					<tr><td>公司地址:</td><td>阿联酋迪拜自贸区XX地区XX街道XX号</td></tr>
+					<tr><td>公司地址:</td><td>Bayswater tower office 1812,  Al Abraj South Street, Dubai</td></tr>
 					<tr><td>公司邮件:</td><td>info@fomifx.com</td></tr>
 					<tr><td>版权所有:</td><td>福米移民服务有限公司</td></tr>
 				</table>
@@ -37,7 +37,7 @@
 				wechat: require('../assets/img/wechat.jpg'),
 				icon: require('../assets/img/footer-icon.png'),
 				navList:[{
-					name:'迪拜人民',
+					name:'迪拜移民',
 					url:'/'
 				},{
 					name:'CRS专题',
@@ -93,6 +93,9 @@
 				p {
 					font-size: 18*@rem;
 					margin-top: 30*@rem;
+				}
+				.wechat{
+					width: 90%;
 				}
 			}
 			h3 {
