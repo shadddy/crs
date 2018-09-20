@@ -149,6 +149,9 @@
 				.content{
 					width: 100%;
 				}
+				.second{
+					display: none;
+				}
 				.third{
 					position: relative;
 					.icon{
