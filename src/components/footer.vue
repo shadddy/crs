@@ -21,7 +21,7 @@
 					<tr><td>免费咨询:</td><td>9:30AM-20:30PM</td>
 					<tr><td>移民受理:</td><td>9:30AM-20:30PM</td></tr>
 					<tr><td>公司地址:</td><td>Bayswater tower office 1812,  Al Abraj South Street, Dubai</td></tr>
-					<tr><td>公司邮件:</td><td>info@fomifx.com</td></tr>
+					<tr><td>公司邮件:</td><td>info@idmigrate.com</td></tr>
 					<tr><td>版权所有:</td><td>艾迪移民服务有限公司</td></tr>
 				</table>
 			</div>

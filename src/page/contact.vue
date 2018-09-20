@@ -15,7 +15,7 @@
 					</div>
 					<div class="contact-box wow fadeInUp">
 							<span>公司邮箱:</span>
-							<p>info@fomifx.com</p>
+							<p>info@idmigrate.com</p>
 							<span>移民顾问:</span>
 							<p>扫描下方二维码联系专业CRS应对及疑问顾问</p>
 							<img :src="wechat" alt="wechat" class="wechat"/>
